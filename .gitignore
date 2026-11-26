@@ -1,5 +1,6 @@
 # IDE and editor files
 .idea/
+.fleet/
 .vs/
 .vscode/
 *.sln
@@ -8,6 +9,8 @@
 *.unityproj
 *.user
 *.userprefs
+*.sln.iml
+*.iml
 
 # Unity generated directories
 [Ll]ibrary/
