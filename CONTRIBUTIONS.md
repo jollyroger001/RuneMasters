@@ -1,11 +1,18 @@
-# Project Contributions - RuneMasters
+# Project Contributions — RuneMasters
 
-This document outlines my specific contributions to the **RuneMasters** project as a **Game Designer**.
+## Role
 
-## My Role
-* **System Design**: Conceptualized and balanced core game mechanics and turn-based logic.
-* **Technical Documentation**: Authored the Game Design Document (GDD) and technical specifications.
-* **Pipeline Management**: Managed assets and logic integration using Git version control.
+This repository documents my work on RuneMasters as a game and systems designer.
 
-## Project Context
-This project was developed as part of a professional training path at **Digital Bros Game Academy**, focusing on multidisciplinary team collaboration and industry-standard workflows.
+- Conceptualized and balanced core game mechanics and turn-based logic.
+- Authored game-design and technical documentation.
+- Managed assets and source integration through Git.
+- Collaborated across a multidisciplinary team workflow.
+
+## Project context
+
+RuneMasters was developed as part of a training path at Digital Bros Game Academy, with an emphasis on industry-standard team workflows and technical documentation.
+
+## Scope
+
+This document describes the role represented in this fork. It does not claim authorship of every asset, script, or third-party dependency in the repository.

@@ -1,84 +1,42 @@
 # RuneMasters
 
-RuneMasters è un gioco strategico a turni su griglia esagonale, sviluppato con Unity. Il progetto include contenuti di gioco, unità e nemici, rune e abilità, mappe, interfaccia utente, animazioni ed effetti.
+RuneMasters is a turn-based, hex-grid strategy prototype developed in Unity with C#.
 
-## Stato del progetto
+> This repository is the public fork maintained on GitHub. Preserve upstream attribution and review third-party assets before reuse.
 
-Progetto Unity in fase di sviluppo/prototipazione. Il repository contiene scene di gameplay e strumenti per la modifica delle mappe; non sono documentati qui build o piattaforme di rilascio.
+## Overview
 
-## Requisiti
+- Hex-based tactical map and movement systems
+- Turn-based gameplay logic
+- Unity project structure and C# scripts
+- Game-design documentation and technical contribution notes
 
-- **Unity Editor:** `2020.3.13f1` (vedi `ProjectSettings/ProjectVersion.txt`)
-- **Pacchetti Unity:** vedere `Packages/manifest.json`
-- **Codice:** C#
+## Repository contents
 
-Apri la cartella del repository con la versione Unity indicata. Unity installerà i pacchetti dichiarati nel manifest. Per evitare modifiche involontarie ai riferimenti, non spostare o rinominare asset e cartelle direttamente fuori dall'Editor.
+- `Assets/` — Unity assets and project source material
+- `Packages/` — Unity package declarations
+- `ProjectSettings/` — Unity project configuration
+- `CONTRIBUTIONS.md` — role and contribution summary
+- `docs/` — available design and project documentation
 
-## Scene principali
+## Requirements
 
-Le scene si trovano in `Assets/Scenes/`:
+Use a Unity Editor version compatible with the project files. Before opening or rebuilding the project, review `Packages/manifest.json` and `ProjectSettings/ProjectVersion.txt`.
 
-- `MainMenu.unity` — scena del menu principale;
-- `Andrea_GameplayScene.unity` — scena di gameplay;
-- `MapEditorScene.unity` — scena dell'editor mappe;
-- `SampleScene.unity` — scena di esempio/prototipo.
+A typical workflow is:
 
-Verifica le scene di avvio in **File → Build Settings** dentro Unity: il README non presume quale scena sia configurata come iniziale.
+1. Clone the repository.
+2. Open the repository root with Unity Hub.
+3. Select the Unity version recorded by the project, if available.
+4. Let Unity regenerate local Library and cache files.
+5. Open a suitable scene and test in Play Mode.
 
-## Catalogo dei contenuti
+Do not commit generated folders such as `Library`, `Temp`, `Obj`, `Logs`, `Build`, or local IDE settings.
 
-La gerarchia di Unity `Assets/` è mantenuta perché prefab, scene, materiali e script fanno riferimento agli asset tramite GUID. Le cartelle già esistenti sono raggruppate per funzione:
+## Third-party content
 
-| Percorso | Contenuto |
-|---|---|
-| `Assets/Scenes/` | Scene del menu, gameplay, editor mappe e prototipo |
-| `Assets/Prefabs/` | Prefab di unità, nemici, tile, editor mappe, UI, audio, timeline ed effetti |
-| `Assets/ScriptableObjects/` | Dati configurabili: abilità, aree, effetti, rune, audio e configurazioni di board/livelli |
-| `Assets/Materials/` | Materiali del gioco per personaggi, tile e ambienti |
-| `Assets/Animations/` | Clip e controller di animazione |
-| `Assets/Art/` | Risorse grafiche, font, rune e mesh |
-| `Assets/Hexlands_LowPolyStyle/` | Risorse di ambientazione esagonale: scene, materiali, mesh, prefab e texture |
-| `Assets/Low Poly Hexagons/` | Modelli, prefab, materiali, texture e composizioni di terreno esagonale |
-| `Assets/Mini Legion Grunt PBR HP Polyart/` | Modello Grunt, animazioni, prefab, scene e texture |
-| `Assets/Mini Legion Lich PBR HP Polyart/` | Modello Lich, animazioni, prefab, scene e texture |
-| `Assets/Magic VFX/` | Effetto magico di ghiaccio, prefab, scena demo e audio |
-| `Assets/JMO Assets/Cartoon FX/` | Effetti particellari, prefab, shader, materiali e risorse demo |
-| `Assets/Plugins/FMOD/` | Integrazione FMOD e librerie per le piattaforme supportate dal plugin |
-| `Assets/Plugins/` | Plugin e integrazioni Unity |
+Some assets may originate from third-party sources or be covered by individual licenses. Do not redistribute an asset, sound, model, texture, or plugin until its source and license permit redistribution. This repository-level MIT license does not override the terms of third-party assets.
 
-### Dati di gioco (`ScriptableObjects`)
+## License
 
-- `Abilities/` — abilità di Mage, Tank, Thief e nemici, aree d'effetto, gittate ed effetti (danno, cura, buff, debuff, danno nel tempo e interazione con la mappa).
-- `Runes/` — rune generiche e set specifici per Mage, Tank e Thief.
-- `Audio/` — configurazioni audio per musica, attacchi, danni, vittoria/sconfitta e interfaccia.
-- `Board/` e asset `Board*` — collezioni di tile e configurazioni di board/livelli.
-
-### Prefab
-
-- `Prefabs/Units/` — prefab delle unità giocabili.
-- `Prefabs/Tiles/` — tile della griglia e terreni.
-- `Prefabs/MapEditor/` — pennelli dell'editor per unità e tile.
-- `Prefabs/UI/` — HUD, menu e pannelli.
-- `Prefabs/Audio/` — controller, manager, emitter e mixer.
-- `Prefabs/Timeline/` — risorse Timeline.
-- `Prefabs/effects/` — effetti usati dal gioco.
-
-## Struttura di alto livello
-
-```text
-.
-├── Assets/                 # Scene, codice/risorse del gioco, prefab e contenuti Unity
-├── Packages/               # Manifest e lockfile dei pacchetti Unity
-├── ProjectSettings/        # Impostazioni del progetto Unity
-├── CONTRIBUTIONS.md        # Indicazioni per i contributi
-├── .gitignore              # File esclusi dal controllo versione
-└── README.md
-```
-
-## Contributi
-
-Prima di proporre modifiche, consulta [CONTRIBUTIONS.md](./CONTRIBUTIONS.md). Per le risorse Unity, conserva insieme ogni asset e il relativo file `.meta`; preferisci spostamenti effettuati dall'Editor Unity per mantenere validi i riferimenti.
-
-## Licenze delle risorse
-
-Il progetto include asset e plugin di terze parti (tra cui Cartoon FX, FMOD, font e pacchetti di modelli). Le licenze possono variare: consulta i file di licenza/readme inclusi nelle rispettive cartelle e verifica i termini prima di ridistribuire o pubblicare una build. La presenza dei file nel repository non implica che tutte le risorse siano rilasciate con la stessa licenza.
+This repository is distributed under the MIT License. See [LICENSE](LICENSE).
